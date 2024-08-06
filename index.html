@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Comparison</title>
+    <style>
+        @font-face {
+            font-family: 'Intro';
+            src: url('fonts/intro.woff2') format('woff2'),
+                 url('fonts/intro.woff') format('woff'),
+                 url('fonts/intro.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Intro', sans-serif;
+            background-color: #2a2a2a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        .card {
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            width: 320px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .card p {
+            margin: 5px 0;
+        }
+        .card .status {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .card .status div {
+            margin-right: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button-container button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .decompiler, .free, .keyless {
+            color: green;
+        }
+        .decompiler.red, .free.red, .keyless.red {
+            color: red;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cards-container">
+    <div class="card">
+        <div class="content">
+            <div>
+                <h2>Celery v2</h2>
+                <p>- Safe</p>
+                <p>- Lots of updates with improvements</p>
+                <p>- Popular choice</p>
+                <p>- Had an API - discontinued because of impersonations. Beware of any fake Celery APIs or</p>
+            </div>
+            <div class="status">
+                <div>UNC: ~70%</div>
+                <div>Level: 8</div>
+                <div>Windows</div>
+            </div>
+            <div class="button-container">
+                <div>
+                    <span class="decompiler green">Decompiler</span>
+                    <span class="free green">Free</span>
+                    <span class="keyless green">Keyless</span>
+                </div>
+                <button onclick="redirectTo('https://celery.zip/Release.zip')">GET</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div>
+                <h2>Solara</h2>
+                <p>- Popular choice</p>
+                <p>- Won't last long (owner confirmed)</p>
+                <p>- Discord server keeps getting taken down</p>
+                <p>- Has vulnerabilities, be careful to not execute scripts you don't trust</p>
+            </div>
+            <div class="status">
+                <div>UNC: ~66%</div>
+                <div>Level: 3</div>
+                <div>Windows</div>
+            </div>
+            <div class="button-container">
+                <div>
+                    <span class="decompiler red">Decompiler</span>
+                    <span class="free green">Free</span>
+                    <span class="keyless green">Keyless</span>
+                </div>
+                <button onclick="redirectTo('https://solaraweb.vercel.app')">GET</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div>
+                <h2>Nihon</h2>
+                <p>- Trusted - they have been around for a while</p>
+                <p>- Not released yet</p>
+                <p>- Premium or free, both have the same Level and UNC</p>
+            </div>
+            <div class="status">
+                <div>UNC: ??</div>
+                <div>Level: ??</div>
+                <div>Windows</div>
+            </div>
+            <div class="button-container">
+                <div>
+                    <span class="decompiler green">Decompiler</span>
+                    <span class="free green">Free</span>
+                    <span class="keyless red">Keyless</span>
+                </div>
+                <button onclick="alert('Nihon is not released yet')">NOT RELEASED</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div>
+                <h2>Wave</h2>
+                <p>- Paid premium version</p>
+                <p>- Premium version (do not buy) and Free version</p>
+                <p>- Claims to have 100% UNC for premium, 80% UNC for free version</p>
+                <p>- Owned by the Arceus X Team who stole user data in 2021</p>
+            </div>
+            <div class="status">
+                <div>UNC: 100% / 80% - could be faked</div>
+                <div>Level: 7</div>
+                <div>Windows</div>
+            </div>
+            <div class="button-container">
+                <div>
+                    <span class="decompiler red">Decompiler</span>
+                    <span class="free green">Free</span>
+                    <span class="keyless red">Keyless</span>
+                </div>
+                <button onclick="redirectTo('https://getwave.gg/')">GET FREE OR PAID</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    Made by 45rv
+</footer>
+
+<script>
+    function redirectTo(url) {
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>
